@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="kk"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Кіру және тіркелу — Психолог қасыңда</title><link rel="stylesheet" href="./css/style.css"><link rel="stylesheet" href="./css/auth.css"></head><body>
+<header class="header"><div class="container nav">
+<a class="logo" href="index.html">Психолог қасыңда</a>
+<button class="menu-btn" aria-label="Мәзір">☰</button>
+<nav class="nav-links">
+<a href="index.html">Басты бет</a><a href="about.html">Психолог туралы</a><a href="services.html">Қызметтер</a>
+<a href="tests.html">Тесттер</a><a href="consultation.html">Кеңес алу</a><a href="materials.html">Материалдар</a>
+<a href="videos.html">Бейнелер</a><a href="faq.html">Сұрақтар</a><a href="contacts.html">Байланыс</a>
+<a href="auth.html" id="authLink" class="auth-nav">Кіру</a>
+</nav></div></header>
+
+<main><section class="auth-section"><div class="container">
+<div class="auth-card reveal">
+  <h1>Жеке кабинет</h1>
+  <p class="auth-sub">Тіркеліп, тесттер мен кеңеске жазылу мүмкіндігін ал.</p>
+
+  <div class="auth-tabs" role="tablist">
+    <button type="button" class="auth-tab is-active" id="tabLogin" role="tab" aria-selected="true">Кіру</button>
+    <button type="button" class="auth-tab" id="tabRegister" role="tab" aria-selected="false">Тіркелу</button>
+  </div>
+
+  <form id="authForm" novalidate>
+    <div class="auth-field">
+      <label for="email">Gmail пошта</label>
+      <input type="email" id="email" autocomplete="email" placeholder="example@gmail.com" required>
+    </div>
+    <div class="auth-field">
+      <label for="password">Құпия сөз</label>
+      <div class="auth-pass">
+        <input type="password" id="password" autocomplete="current-password" placeholder="Кемінде 6 таңба" required minlength="6">
+        <button type="button" id="togglePass" class="auth-eye">Көрсету</button>
+      </div>
+    </div>
+    <div class="auth-field" id="confirmField" hidden>
+      <label for="password2">Құпия сөзді қайталау</label>
+      <input type="password" id="password2" autocomplete="new-password" placeholder="Қайталаңыз">
+    </div>
+    <p class="auth-msg" id="authMsg" role="alert" aria-live="polite"></p>
+    <button type="submit" class="btn btn-primary auth-submit" id="authSubmit">Кіру</button>
+    <button type="button" class="auth-link" id="forgotBtn">Құпия сөзді ұмыттың ба?</button>
+  </form>
+
+  <div id="authDone" hidden>
+    <p class="auth-hello">Сен кірдің: <strong id="userEmail"></strong></p>
+    <p class="auth-note" id="verifyNote" hidden>Поштаңа растау хаты жіберілді. Сілтемені басып, поштаны растаңыз.</p>
+    <a class="btn btn-primary auth-submit" href="index.html">Басты бетке өту</a>
+    <button type="button" class="auth-link" id="logoutBtn">Шығу</button>
+  </div>
+</div>
+</div></section></main>
+
+<footer class="footer"><div class="container"><div class="logo">Психолог қасыңда</div>
+<p>Психолог қасыңда — студенттерге психологиялық қолдау көрсету орталығы</p><p>© 2026 Барлық құқықтар қорғалған</p></div></footer>
+<script src="./js/script.js"></script><script type="module" src="./js/auth.js"></script></body></html>

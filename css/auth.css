@@ -1,0 +1,20 @@
+.auth-section{padding:60px 0}
+.auth-card{max-width:440px;margin:auto;background:#fff;padding:34px 30px;border-radius:30px;box-shadow:var(--shadow)}
+.auth-card h1{font-family:'Montserrat','Noto Sans','Segoe UI',Arial,sans-serif;font-size:28px;margin:0 0 6px}
+.auth-sub{color:var(--muted);margin:0 0 22px}
+.auth-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;background:var(--blue2);border-radius:16px;margin-bottom:22px}
+.auth-tab{border:0;background:transparent;padding:11px;border-radius:12px;font-weight:800;color:var(--muted);cursor:pointer;transition:.25s}
+.auth-tab.is-active{background:#fff;color:var(--accent2);box-shadow:0 4px 14px rgba(62,77,110,.1)}
+.auth-field{margin-bottom:16px}
+.auth-field[hidden],#authDone[hidden],#authForm[hidden],.auth-tabs[hidden],.auth-link[hidden],.auth-note[hidden]{display:none}
+.auth-pass{position:relative}
+.auth-pass input{padding-right:92px}
+.auth-eye{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:var(--accent);font-size:13px;font-weight:700;cursor:pointer;padding:6px 8px}
+.auth-msg{min-height:1.4em;margin:0 0 12px;color:#c0392b;font-size:14px;font-weight:600}
+.auth-msg.is-ok{color:#367552}
+.auth-submit{width:100%}
+.auth-link{display:block;margin:16px auto 0;border:0;background:transparent;color:var(--accent);font-weight:700;font-size:14px;cursor:pointer}
+.auth-link:hover{text-decoration:underline}
+.auth-hello{margin:0 0 14px;word-break:break-all}
+.auth-note{margin:0 0 16px;padding:12px 14px;background:var(--beige);border-radius:14px;font-size:14px}
+.auth-card .btn{margin-top:4px}

@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="kk"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Онлайн кеңес — Психолог қасыңда</title><link rel="stylesheet" href="./css/style.css">
+<style>
+.form-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn-telegram{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:#229ED9;color:#fff;border:0}
+.btn-telegram:hover{filter:brightness(.92)}
+</style></head><body>
+<header class="header"><div class="container nav">
+<a class="logo" href="index.html">Психолог қасыңда</a>
+<button class="menu-btn" aria-label="Мәзір">☰</button>
+<nav class="nav-links">
+<a href="index.html">Басты бет</a><a href="about.html">Психолог туралы</a><a href="services.html">Қызметтер</a>
+<a href="tests.html">Тесттер</a><a href="consultation.html">Кеңес алу</a><a href="materials.html">Материалдар</a>
+<a href="videos.html">Бейнелер</a><a href="faq.html">Сұрақтар</a><a href="contacts.html">Байланыс</a>
+<a href="auth.html" id="authLink" class="auth-nav">Кіру</a>
+</nav></div></header>
+
+<section class="page-title"><div class="container reveal"><h1>Онлайн кеңес</h1><p>Өзіңізге ыңғайлы форматты таңдап, психологқа өтініш қалдырыңыз.</p></div></section>
+<section class="section"><div class="container form-card reveal">
+<form id="consult-form" action="https://formsubmit.co/serikovaakgul17@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Жаңа өтініш (Онлайн кеңес) — Психолог қасыңда">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+<div class="form-grid"><div><label>Аты</label><input name="Аты" required placeholder="Атыңызды жазыңыз"></div><div><label>Электрондық пошта</label><input type="email" name="Email" required placeholder="Электрондық поштаңызды енгізіңіз"></div>
+<div><label>Кеңес тақырыбы</label><select name="Кеңес тақырыбы" required><option value="">Тақырыпты таңдаңыз</option><option>Эмоциялық жағдай</option><option>Оқу мәселесі</option><option>Қарым-қатынас</option><option>Стресс</option><option>Басқа мәселе</option></select></div>
+<div><label>Кездесу форматы</label><select name="Кездесу форматы" required><option>Онлайн</option><option>Жеке кездесу</option></select></div>
+<div class="full"><label>Хабарлама</label><textarea name="Хабарлама" required placeholder="Сізді мазалайтын мәселе туралы қысқаша жазыңыз..."></textarea></div>
+<div class="full">
+  <div class="form-actions">
+    <button class="btn btn-primary" type="submit">Кеңеске өтініш жіберу</button>
+   
+  </div>
+  <p id="form-status" style="margin-top:12px" aria-live="polite"></p>
+</div></div></form></div></section>
+
+<footer class="footer"><div class="container"><div class="logo">Психолог қасыңда</div>
+<p>Психолог қасыңда — студенттерге психологиялық қолдау көрсету орталығы</p><p>© 2026 Барлық құқықтар қорғалған</p></div></footer>
+
+<script>
+document.getElementById('consult-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const form = e.target, status = document.getElementById('form-status');
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true; status.textContent = 'Жіберілуде...';
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/serikovaakgul17@gmail.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+    if (!res.ok) throw new Error();
+    status.textContent = 'Өтінішіңіз сәтті жіберілді! Психолог сізбен жақын арада байланысады.';
+    form.reset();
+  } catch (err) {
+    status.textContent = 'Қате шықты. Кейінірек қайталап көріңіз.';
+  } finally { btn.disabled = false; }
+});
+</script>
+<script src="./js/script.js"></script><script type="module" src="./js/auth.js"></script></body></html>
