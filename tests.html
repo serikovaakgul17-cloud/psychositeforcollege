@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="kk"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Психологиялық тесттер — Психолог қасыңда</title><link rel="stylesheet" href="./css/style.css">
+<style>
+.tests-menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.tests-menu .test-option{text-align:left;cursor:pointer;border:2px solid transparent;transition:.2s}
+.tests-menu .test-option:hover{transform:translateY(-3px);border-color:#6c8cff}
+.tests-menu .test-option h3{margin:0 0 8px}
+.tests-menu .test-option p{margin:0 0 12px}
+.tests-menu .test-option .badge{display:inline-block;font-size:13px;opacity:.75}
+.tq-wrap{max-width:720px;margin:0 auto}
+.tq-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+.tq-bar{height:8px;border-radius:99px;background:rgba(0,0,0,.1);overflow:hidden;margin-bottom:20px}
+.tq-bar span{display:block;height:100%;width:0;background:#6c8cff;transition:width .3s}
+.tq-q{font-size:20px;font-weight:600;margin-bottom:18px}
+.tq-answers{display:grid;gap:10px}
+.tq-answers button,.tq-btn{padding:12px 16px;border-radius:12px;border:2px solid rgba(0,0,0,.12);background:#fff;cursor:pointer;font:inherit;text-align:left;transition:.2s}
+.tq-answers button:hover{border-color:#6c8cff;background:#f3f6ff}
+.tq-btn{text-align:center;background:#6c8cff;color:#fff;border-color:#6c8cff}
+.tq-btn.ghost{background:transparent;color:inherit;border-color:rgba(0,0,0,.2)}
+.tq-result h3{margin:0 0 8px}
+.tq-score{font-size:15px;opacity:.75;margin-bottom:12px}
+.tq-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.tq-lvl{padding:16px;border-radius:12px;border-left:6px solid #6c8cff;background:#f3f6ff}
+.tq-lvl.mid{border-color:#f0ad4e;background:#fff8ec}
+.tq-lvl.high{border-color:#e55353;background:#fff1f1}
+.tq-lvl.low{border-color:#3fb27f;background:#effaf4}
+.hidden{display:none!important}
+</style></head><body>
+<header class="header"><div class="container nav">
+<a class="logo" href="index.html">Психолог қасыңда</a>
+<button class="menu-btn" aria-label="Мәзір">☰</button>
+<nav class="nav-links">
+<a href="index.html">Басты бет</a><a href="about.html">Психолог туралы</a><a href="services.html">Қызметтер</a>
+<a href="tests.html">Тесттер</a><a href="consultation.html">Кеңес алу</a><a href="materials.html">Материалдар</a>
+<a href="videos.html">Бейнелер</a><a href="faq.html">Сұрақтар</a><a href="contacts.html">Байланыс</a>
+<a href="auth.html" id="authLink" class="auth-nav">Кіру</a>
+</nav></div></header>
+
+<section class="page-title"><div class="container reveal"><h1>Психологиялық тесттер</h1><p>Өзіңіздің жағдайыңызды жалпы бағалауға арналған қысқа сауалнамалар. Тақырыпты таңдаңыз.</p></div></section>
+
+<section class="section"><div class="container">
+<div id="testsMenu" class="tests-menu reveal"></div>
+
+<div id="testRunner" class="card test-card hidden">
+<div class="tq-wrap">
+<div class="tq-top"><h2 id="tqTitle"></h2><button class="tq-btn ghost" id="tqBack" type="button">← Тесттер тізімі</button></div>
+<div id="tqQuizBox">
+<div class="tq-bar"><span id="tqBar"></span></div>
+<p class="muted" id="tqCounter"></p>
+<div class="tq-q" id="tqQuestion"></div>
+<div class="tq-answers" id="tqAnswers"></div>
+<div class="tq-actions"><button class="tq-btn ghost" id="tqPrev" type="button">Алдыңғы сұрақ</button></div>
+</div>
+<div id="tqResult" class="tq-result hidden"></div>
+<p class="muted" style="margin-top:20px">Ескерту: тест нәтижесі диагноз болып саналмайды. Қиындық ұзақ уақыт сақталса, психологқа жүгінген дұрыс.</p>
+</div></div>
+</div></section>
+
+<footer class="footer"><div class="container"><div class="logo">Психолог қасыңда</div>
+<p>Психолог қасыңда — студенттерге психологиялық қолдау көрсету орталығы</p><p>© 2026 Барлық құқықтар қорғалған</p></div></footer>
+<script src="./js/script.js"></script><script src="./js/tests.js"></script><script type="module" src="./js/auth.js"></script></body></html>
